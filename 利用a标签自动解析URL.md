@@ -1,9 +1,8 @@
-#利用a标签自动解析URL
+### 利用a标签自动解析URL
+---------- 
 
-#很多时候我们有从一个URL中提取域名，查询关键字，变量参数值等的需要，而万万没想到可以让浏览器方便地帮我们完成这一任务而不用我们写正则去抓取。方法就在JS代码里先创建一个a标签然后将需要解析的URL赋值给a的href属性，然后就得到了一切我们想要的了。
-
-#利用这一原理，稍微扩展一下，就得到了一个更加健壮的解析URL各部分的通用方法了。下面代码来自James的博客。
-
+#### 代码块
+``` python
 function parseURL(url) {
     var a =  document.createElement('a');
     a.href = url;
@@ -31,3 +30,4 @@ function parseURL(url) {
         segments: a.pathname.replace(/^\//,'').split('/')
     };
 }
+```
